@@ -6,6 +6,7 @@ After preparing database VM, please setup Mysql server.
 
 ## Installation
 sudo apt INSTALL default-mysql-server;
+
 sudo mysql;
 
 Create DB user:
@@ -15,7 +16,9 @@ GRANT ALL PRIVILEGES ON *.* TO 'db_conn'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 ```
 After that ALLOW host to outside - 
+
 sudo vim /etc/mysql/my.cnf
+
 bind-address = 0.0.0.0
 
 sudo systemctl restart mariadb
@@ -26,6 +29,7 @@ netstat -ant | grep 3306
 ## DB Command
 
 sudo mysql;
+
 Create Database:
 
 ```bash
